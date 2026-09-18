@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign-up Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Left Hero / Sidebar Section -->
+    <aside class="sidebar">
+      <div class="logo-banner">
+        <!-- SVG Odin Viking Logo -->
+        <svg class="odin-logo-icon" viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Helmet Horns and Outline -->
+          <polygon points="12,20 28,34 22,60 12,20" />
+          <polygon points="88,20 72,34 78,60 88,20" />
+          <polygon points="28,34 50,22 72,34 78,60 50,75 22,60" />
+          <!-- Eye Mask & Details -->
+          <polyline points="32,45 42,42 50,47 58,42 68,45" />
+          <polyline points="36,60 50,55 64,60" />
+          <line x1="50" y1="55" x2="50" y2="75" />
+          <polygon points="45,63 55,63 50,69" />
+          <line x1="38" y1="48" x2="44" y2="48" />
+          <line x1="56" y1="48" x2="62" y2="48" />
+        </svg>
+        <span class="logo-text">ODIN</span>
+      </div>
+
+      <div class="photo-credit">
+        Photo by <a href="https://unsplash.com/@haliewestphoto" target="_blank" rel="noopener noreferrer">Halie West</a> on <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>
+      </div>
+    </aside>
+
+    <!-- Right Form Section -->
+    <main class="content-section">
+      
+      <!-- Top Callout Text -->
+      <section class="intro-section">
+        <p class="intro-heading">
+          This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br />
+          Sign up <em>now</em> to get started.
+        </p>
+        <p class="intro-subtext">You <em>know</em> you want to.</p>
+      </section>
+
+      <!-- Main Form Area -->
+      <form action="#" method="post" id="signup-form">
+        <div class="form-container">
+          <h2>Let’s do this!</h2>
+          
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="first_name">FIRST NAME</label>
+              <input type="text" id="first_name" name="first_name" value="Thor" required />
+            </div>
+
+            <div class="form-group">
+              <label for="last_name">LAST NAME</label>
+              <input type="text" id="last_name" name="last_name" value="Odinson" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">EMAIL</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">PHONE NUMBER</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="password">PASSWORD</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+
+            <div class="form-group">
+              <label for="confirm_password">CONFIRM PASSWORD</label>
+              <input type="password" id="confirm_password" name="confirm_password" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- Submission Section -->
+        <div class="action-section">
+          <button type="submit" class="submit-btn">Create Account</button>
+          <p class="login-prompt">
+            Already have an account? <a href="#">Log in</a>
+          </p>
+        </div>
+      </form>
+
+    </main>
+  </div>
+</body>
+</html>

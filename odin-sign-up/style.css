@@ -1,0 +1,208 @@
+/* Custom Norse-style runic font fallback / basic reset */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #111827;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* --------------------------------------
+   LEFT SIDEBAR / HERO IMAGE
+   -------------------------------------- */
+.sidebar {
+  width: 38%;
+  min-width: 320px;
+  background-image: url('halie-west-25xggax4bSA-unsplash.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo-banner {
+  margin-top: 18vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 0;
+  width: 100%;
+}
+
+.odin-logo-icon {
+  width: 72px;
+  height: 72px;
+}
+
+.logo-text {
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 4px;
+}
+
+.photo-credit {
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 14px 10px;
+}
+
+.photo-credit a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* --------------------------------------
+   RIGHT SIDEBAR / CONTENT SECTION
+   -------------------------------------- */
+.content-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f9fafb;
+}
+
+/* Top Intro Text */
+.intro-section {
+  padding: 40px 48px;
+  max-width: 760px;
+}
+
+.intro-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.45;
+  margin-bottom: 24px;
+  color: #111827;
+}
+
+.intro-subtext {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Middle Form Card */
+.form-container {
+  background-color: #ffffff;
+  padding: 32px 48px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 260px));
+  column-gap: 48px;
+  row-gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  height: 34px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  background-color: #ffffff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Default Focus State (Blue border + subtle glow) */
+.form-group input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Invalid State for Password fields (matching the red outline in design) */
+.form-group input[type="password"]:invalid:not(:placeholder-shown),
+.form-group input.invalid,
+.form-group input[type="password"]:not(:focus):not(:placeholder-shown) {
+  border-color: #dc2626;
+}
+
+/* --------------------------------------
+   BOTTOM BUTTON & LOGIN AREA
+   -------------------------------------- */
+.action-section {
+  padding: 36px 48px;
+}
+
+.submit-btn {
+  background-color: #596d48;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 44px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+  background-color: #4b5d3c;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+.login-prompt {
+  margin-top: 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.login-prompt a {
+  color: #596d48;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.login-prompt a:hover {
+  text-decoration: underline;
+}
