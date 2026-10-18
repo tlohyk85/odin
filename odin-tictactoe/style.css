@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+h1 {
+  color: #1e293b;
+}
+
+.status {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* 3x3 Grid Layout */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  grid-template-rows: repeat(3, 90px);
+  gap: 8px;
+}
+
+/* Individual Cell Styling */
+.cell {
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0f172a;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.cell:hover:not(:disabled) {
+  background-color: #e2e8f0;
+}
+
+.cell:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+/* Action button */
+.restart-btn {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.restart-btn:hover {
+  background-color: #1d4ed8;
+}
